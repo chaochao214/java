@@ -1,0 +1,47 @@
+1.能够使用Request对象获取HTTP协议请求内容(掌握)(包含请求行、请求头、请求体的信息)
+	获取请求行的信息:
+	getMethod()获取请求方式
+	getRequestURI():统一资源标识符
+	getRequestURL():统一资源定位符
+	getProtocl():获取协议版本
+	getRemoteAddr()获取客户端的IP地址
+	
+	获取请求头的信息:
+	getHeader(name):根据name获取请求头
+	getHeaderNames():获取所有请求头的name
+	
+	获取请求参数:(重要)
+	getParameter(name):根据一个参数名获取一个参数值
+	getParameterValues(name):根据一个参数名获取多个参数值
+	getParameterMap():获取所有的请求参数，并且封装到一个Map中，map的key就是参数名，
+	map的value就是参数值(String[]类型)
+
+2.能够处理HTTP请求参数的乱码问题 (掌握)
+	在Tomcat8及以后，只有POST请求会发生中文乱码，调用request.setCharacterEncoding("UTF-8")
+
+3.能够使用Request域对象 (掌握)
+	setAttribute(name,value)
+	getAttribute(name)
+	removeAttribute(name)
+	
+	作用域:一次请求中,它只能和请求转发一起使用
+
+4.能够使用Request对象做请求转发(掌握)
+	request.getRequestDispatcher("转发到的路径").forward(request,response)
+
+5.能够完成登录案例(
+	1.能够获取请求参数。
+	2.在Servlet中使用JdbcTemplate进行用户名和密码的校验
+	3.怎么去判断是否登录成功
+	4.分别处理登录成功以及登录失败的情况
+		4.1登录失败,请求转发跳转回到login.jsp并且使用request域对象携带错误信息"msg"
+		4.2登录成功,请求转发跳转到success.jsp,并且使用request域对象携带user对象的信息
+	
+
+6.能够理解相对路径和绝对路径(了解)
+	相对路径:不以"/"开头的路径写法，相对的是目标文件的url地址相对当前文件的url地址
+	绝对路径:以"/"开头的路径写法，有俩原则。
+	1.如果是请求转发则在完整的url地址上省略"项目路径"
+	2.如果是其它情况，则在完整的url地址上省略"服务器路径"
+	
+如果你万一搞不懂相对路径和绝对路径，就写完整的url

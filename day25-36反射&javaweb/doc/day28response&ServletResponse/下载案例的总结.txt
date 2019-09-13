@@ -1,0 +1,20 @@
+1.自定义一个Servlet用于下载DownloadServlet
+2.当客户端点击下载某个文件的时候，请求发到我们自己定义的那个DownloadServlet，
+并且通过url后面拼接"?fileName=文件名"携带参数
+
+在DownloadServlet中
+3.拿到客户端要下载的文件名:request.getParameter("fileName")
+4.将服务器中对应的那个文件转换成字节输入流:new FileInputStream(文件路径)
+5.使用response.getOutputStream()获取一个字节输出流
+6.使用IOUtils.copy(in,out)进行文件的读写操作，然后关流
+
+
+7.如果需要弹出一个下载提示框的话，rsponse.setHeader("Content-Disposation","值")
+
+8.这个响应头的值里面不能包含中文，如果有中文要将中文转换成"英文数字"
+	8.1 火狐浏览器:使用Base64进行编码
+	8.2 其它浏览器:使用URLEncoder进行编码
+	
+9. 怎么判断是不是火狐浏览器，通过request.getHeader("User-Agent")来进行判断
+
+10.使用ServletContext对象将要下载的文件转换成流，来代替new FileInputStream()

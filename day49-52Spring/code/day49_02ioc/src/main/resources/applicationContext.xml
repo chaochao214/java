@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- ioc控制反转: 通过spring容器去创建对象管理对象
+     bean:ioc的配置 , id对象的唯一标识，class -->
+    <bean id="AccountService" class="com.twc.service.impl.AccountServiceImpl">
+     <property name="accountDao" ref="AccountDao"></property>
+    </bean>
+    <bean id="AccountDao" class="com.twc.dao.impl.AccountDaoImpl"></bean>
+</beans>

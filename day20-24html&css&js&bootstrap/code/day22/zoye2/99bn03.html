@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num =window.prompt("请输入乘法表的大小","9");
+    num = parseInt(num);
+
+    document.write("<table border = '1'  align = 'center' style='border-collapse:collapse'>")
+    for(var i=1;i<=num;i++){
+        document.write("<tr>")
+        for(j=1;j<i; j++){
+            document.write("<td>"+i+"*"+"j"+"=" + (i*j)+"</td>");
+        }
+        document.write("</tr>")
+    }
+    document.write("</table>")
+
+
+</script>
+</body>
+</html>

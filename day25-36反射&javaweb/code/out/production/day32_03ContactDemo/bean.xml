@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="ContactDao" class="demo.dao.ContactDao"></bean>
+    <bean id="ContactService" class="demo.ContactService.ContactService"></bean>
+
+</beans>

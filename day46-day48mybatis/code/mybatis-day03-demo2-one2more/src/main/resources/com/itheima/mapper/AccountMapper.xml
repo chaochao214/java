@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace="对应Dao的全限定名"
+-->
+<mapper namespace="com.itheima.mapper.AccountMapper">
+    <!--
+     根据用户ID查询账号信息
+    -->
+    <!--根据uid查询用户信息-->
+    <select id="getAccountByUserId" parameterType="int" resultType="Account">
+         select*from account where uid = #{uid}
+
+    </select>
+
+
+</mapper>

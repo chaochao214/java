@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+
+    <button @click="fun('good')">改变</button>
+    <br>
+    v-model 用于读取赋值json数据,并显示到输入框中(表单回显)
+    <input type="text" v-model="user.username"><br>
+    <input type="text" v-model="user.password"><br>
+    <input type="button" @click="fun" value="按钮">
+
+</div>
+</body>
+
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            message: "helloworld",
+            user: {
+                username: "tom",
+                password: "123"
+            }
+        },
+        methods: {
+
+            /*fun: function (msg) {
+                this.message = msg;
+
+            }*/
+            fun: function () {
+                alert(this.user.username + "" + this.user.password);
+                this.user.username = "fox";
+                this.user.password = "456";
+
+            }
+        }
+
+    })
+</script>
+</html>

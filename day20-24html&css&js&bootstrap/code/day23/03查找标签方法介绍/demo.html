@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function fn1() {
+        //1.找到标签，根据标签名查找调用getElementByTagName("标签名)
+        var elements = document.getElementsByTagName("a")
+        for(var i = 0; i< elements.length;i++){
+            elements[i].href = "http://www.baidu.com"
+        }
+
+    }
+    function fn2() {
+        //1.找到标签，根据标签名查找调用getElementByTagName("标签名)
+        var elements = document.getElementsByName("one")
+        for(var i = 0; i< elements.length;i++){
+            elements[i].innerHTML ="粗茶"
+        }
+
+    }
+    function fn3() {
+        //1.找到标签，根据标签名查找调用getElementByTagName("标签名)
+        var elements = document.getElementsByClassName("two")
+        for(var i = 0; i< elements.length;i++){
+            elements[i].innerHTML = "淡饭"
+        }
+
+    }
+</script>
+
+<body>
+<input type="button" value="(通过标签名)给a链接添加地址" id = "b2" onclick="fn1()">
+<input type="button" value="(通过name属性)给div设值" id = "b3" onclick="fn2()">
+<input type="button" value="(通过标签名)给div" id = "b4" onclick="fn3()">
+<hr/>
+<a>test</a><br/>
+<a>test</a><br/>
+<a>test</a><br/>
+<hr/>
+<div name ="one"></div>
+<div name ="one"></div>
+<div name ="one"></div>
+<hr/>
+<div class="two"></div>
+<div class="two"></div>
+<div class="two"></div>
+</body>
+</html>

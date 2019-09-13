@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_06chapter.java" description="Connection conn = null;" line="10" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_06chapter.java" description="String sql = &quot;UPDATE account SET balance = balance..." line="16" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/JDBCUtils.java" description="InputStream is = JDBCUtils.class.getResourceAsStre..." line="32" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/JDBCUtils.java" description="Connection  conn  = DriverManager.getConnection(UR..." line="37" />
+    <bookmark url="file://$PROJECT_DIR$/day19/src/com/twc/jlyi/_02_02demo.java" description="//    JdbcTemplate jdbcTemplate  = new JdbcTemplat..." line="12" />
+    <bookmark url="file://$PROJECT_DIR$/day19/src/com/twc/tool/jdbcUtils.java" description="private static DataSource dataSource = new" line="4" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/JDBCUtils.java" description="public static DataSource getDataSource() {" line="18" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/JDBCUtils.java" description="private static  DataSource dataSource   =new Combo..." line="12" />
+    <bookmark url="file://$PROJECT_DIR$/day18/src/com/twc/jlyi/_030305demo.java" description="Connection conn = cpds.getConnection();" line="14" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_02classForname.java" description="public static void main(String[] args) throws Clas..." line="9" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_01demo.java" description="Class.forName(&quot;com.mysql.jdbc.Driver&quot;);" line="14" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/zoye/zoye1/jdbcTest.java" description="Connection conn  = DriverManager.getConnection(url..." line="14" />
+    <bookmark url="file://$PROJECT_DIR$/day17/src/com/twc/zoye/zoye1/jdbcTest.java" description="//Connection conn  =  null;" line="10" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/Client.java" description="Class.forName(&quot;com.mysql.jdbc.Driver&quot;);" line="7" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/utils/JdbcUtil.java" description="InputStream  is = classLoader.getResourceAsStream(..." line="19" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/utils/JdbcUtil.java" description="public String test() {" line="48" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/utils/JdbcUtil.java" description="public static void close(Connection conn, Statemen..." line="52" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/test/JdbcTest.java" description="public void test() throws SQLException {" line="12" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/test/JdbcTest.java" description="public class JdbcTest {" line="10" />
+    <bookmark url="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/utils/JdbcUtil_2.java" description="driverClass = properties.getProperty(&quot;driverClass&quot;..." line="23" />
+    <bookmark url="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/MyConnection.java" description="private  Connection conn;" line="11" />
+    <bookmark url="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/MyConnection.java" description="private LinkedList&lt;Connection&gt; connections;" line="12" />
+    <bookmark url="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/MyConnection.java" description="return conn.createStatement();" line="24" />
+    <bookmark url="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/ConnectionPool.java" description="public Connection getConnection() throws SQLExcept..." line="47" />
+    <bookmark url="file://$PROJECT_DIR$/day18ClassLoader/src/com/twc/MyClassLoader.java" line="8" />
+    <bookmark url="file://$PROJECT_DIR$/day18ClassLoader/src/com/twc/Test.java" description="System.out.println( obj.getClass().getClassLoader(..." line="10" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4569c41d-300b-4939-bd71-e58ff5db1a60" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-840196341">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1991" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1991" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-173518959">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="10" />
+          <entry key="iml" value="4" />
+          <entry key="java" value="130" />
+          <entry key="properties" value="24" />
+          <entry key="propertis" value="3" />
+          <entry key="tools" value="1" />
+          <entry key="txt" value="2" />
+          <entry key="xml" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="10" />
+          <entry key="IDEA_MODULE" value="4" />
+          <entry key="JAVA" value="130" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Properties" value="24" />
+          <entry key="XML" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="52" />
+          <entry key="java" value="21758" />
+          <entry key="properties" value="163" />
+          <entry key="propertis" value="16" />
+          <entry key="txt" value="12" />
+          <entry key="xml" value="150" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="21758" />
+          <entry key="PLAIN_TEXT" value="80" />
+          <entry key="Properties" value="163" />
+          <entry key="XML" value="150" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/resources/druidconfig.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>17</find>
+      <find>getC</find>
+      <find>g</find>
+      <find>maxPoolSize</find>
+      <find>jdbcTemplate</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/day17/src/b.properties" />
+        <option value="$PROJECT_DIR$/day17/src/com/twc/jlyi/debug.java" />
+        <option value="$PROJECT_DIR$/day17/a.properties" />
+        <option value="$PROJECT_DIR$/day17/src/jdbc.properties" />
+        <option value="$PROJECT_DIR$/day17/src/com/twc/jlyi/_07_2loginDemo.java" />
+        <option value="$PROJECT_DIR$/day18/day18.iml" />
+        <option value="$PROJECT_DIR$/day18/src/com/twc/jlyi/_01_05chapter.java" />
+        <option value="$PROJECT_DIR$/day18/src/com/twc/jlyi/_02_2chapter.java" />
+        <option value="$PROJECT_DIR$/day18/src/com/twc/jlyi/_02_2datapool.java" />
+        <option value="$PROJECT_DIR$/day18/src/com/twc/jlyi/_02_06TestDemo.java" />
+        <option value="$PROJECT_DIR$/day19/src/com/twc/tool/jdbcUtils.java" />
+        <option value="$PROJECT_DIR$/day17/src/com/twc/jlyi/JDBCUtils.java" />
+        <option value="$PROJECT_DIR$/day18/src/c3p0-config.xml" />
+        <option value="$PROJECT_DIR$/day18/src/c3p0-cofig.xml" />
+        <option value="$PROJECT_DIR$/day18/src/com/twc/jlyi/_030305demo.java" />
+        <option value="$PROJECT_DIR$/day18/src/druid.properties" />
+        <option value="$PROJECT_DIR$/day18/src/com/twc/jlyi/_05demo.java" />
+        <option value="$PROJECT_DIR$/day19/src/com/twc/util/JdbcUtils.java" />
+        <option value="$PROJECT_DIR$/day17/src/com/twc/jlyi/_02classForname.java" />
+        <option value="$PROJECT_DIR$/day17/src/com/twc/jlyi/_01demo.java" />
+        <option value="$PROJECT_DIR$/day17/src/com/twc/zoye/zoye1/jdbcTest.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_01/resources/jdbcinfo.properties" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_01/src/Client.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/test/test.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/test/testJdbc.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/utils/JdbcUtil.java" />
+        <option value="$PROJECT_DIR$/day17_LoginDemo_02/src/com.twc.utils/Client.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/test/test.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/utils/JdbcUtil.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/test/JdbcTest.java" />
+        <option value="$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/utils/JdbcUtil_2.java" />
+        <option value="$PROJECT_DIR$/day18_C3p0_03/src/com/twc/domin/User.java" />
+        <option value="$PROJECT_DIR$/day18_C3p0_03/src/com/twc/Client.java" />
+        <option value="$PROJECT_DIR$/day18_C3p0_03/src/com/twc/utis/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/day18_C3p0_03/resources/c3p0-config.xml" />
+        <option value="$PROJECT_DIR$/day18_ConnectionPool_02/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/MyConnection.java" />
+        <option value="$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/utils/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/day18_DRUID_04/resources/druidconfig.properties" />
+        <option value="$PROJECT_DIR$/day18_DRUID_04/src/com/twc/utils.java" />
+        <option value="$PROJECT_DIR$/day18_DRUID_04/src/com/twc/utils/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/day18_DRUID_04/src/Client.java" />
+        <option value="$PROJECT_DIR$/day18ClassLoader/src/com/twc/MyClassLoader.java" />
+        <option value="$PROJECT_DIR$/day18ClassLoader/src/com/twc/Test.java" />
+        <option value="$PROJECT_DIR$/day19/src/com/twc/jlyi/User.java" />
+        <option value="$PROJECT_DIR$/day19/src/com/twc/jlyi/_02_02demo.java" />
+        <option value="$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/druidconfig.properties" />
+        <option value="$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/User.java" />
+        <option value="$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/utils/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/TestJdbcTemple.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="511" />
+    <option name="y" value="121" />
+    <option name="width" value="1526" />
+    <option name="height" value="973" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Jdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="day19_jdbc元数据&amp;JDbcTemplate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="day19_jdbc元数据&amp;JDbcTemplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554796694396" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day17_JDBCDemo_02" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.25611174" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideawork\Jdbc\day19_jdbc元数据&amp;JDbcTemplate\resources" />
+      <recent name="D:\ideawork\Jdbc\day17_LoginDemo_02\src" />
+      <recent name="D:\ideawork\Jdbc\day19\src" />
+      <recent name="D:\ideawork\Jdbc\day17\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideawork\Jdbc\day19_jdbc元数据&amp;JDbcTemplate\src" />
+      <recent name="D:\ideawork\Jdbc\day19_jdbc元数据&amp;JDbcTemplate\lib" />
+      <recent name="D:\ideawork\Jdbc\day18_DRUID_04" />
+      <recent name="D:\ideawork\Jdbc\day18_ConnectionPool_02\src\com\twc\utils" />
+      <recent name="D:\ideawork\Jdbc\day18_ConnectionPool_02" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.TestJdbcTemple.testQueryRows">
+    <configuration name="TestJdbcTemple.testQueryObeRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day19_jdbc元数据&amp;JDbcTemplate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestJdbcTemple" />
+      <option name="METHOD_NAME" value="testQueryObeRow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJdbcTemple.testQueryOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day19_jdbc元数据&amp;JDbcTemplate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestJdbcTemple" />
+      <option name="METHOD_NAME" value="testQueryOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJdbcTemple.testQueryOneRowForBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day19_jdbc元数据&amp;JDbcTemplate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestJdbcTemple" />
+      <option name="METHOD_NAME" value="testQueryOneRowForBean" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJdbcTemple.testQueryRows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day19_jdbc元数据&amp;JDbcTemplate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestJdbcTemple" />
+      <option name="METHOD_NAME" value="testQueryRows" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJdbcTemple.testQueryRows2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day19_jdbc元数据&amp;JDbcTemplate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestJdbcTemple" />
+      <option name="METHOD_NAME" value="testQueryRows2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TestJdbcTemple.testQueryOne" />
+      <item itemvalue="JUnit.TestJdbcTemple.testQueryObeRow" />
+      <item itemvalue="JUnit.TestJdbcTemple.testQueryOneRowForBean" />
+      <item itemvalue="JUnit.TestJdbcTemple.testQueryRows2" />
+      <item itemvalue="JUnit.TestJdbcTemple.testQueryRows" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestJdbcTemple.testQueryRows" />
+        <item itemvalue="JUnit.TestJdbcTemple.testQueryRows2" />
+        <item itemvalue="JUnit.TestJdbcTemple.testQueryOneRowForBean" />
+        <item itemvalue="JUnit.TestJdbcTemple.testQueryObeRow" />
+        <item itemvalue="JUnit.TestJdbcTemple.testQueryOne" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4569c41d-300b-4939-bd71-e58ff5db1a60" name="Default Changelist" comment="" />
+      <created>1553395265382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553395265382</updated>
+      <workItem from="1553395266903" duration="5369000" />
+      <workItem from="1553482994805" duration="12782000" />
+      <workItem from="1553515062407" duration="7425000" />
+      <workItem from="1553559740060" duration="707000" />
+      <workItem from="1554536637035" duration="2375000" />
+      <workItem from="1554617803879" duration="6114000" />
+      <workItem from="1554624011808" duration="8877000" />
+      <workItem from="1554692210807" duration="127000" />
+      <workItem from="1554706881183" duration="1826000" />
+      <workItem from="1554711292107" duration="34000" />
+      <workItem from="1554781919910" duration="3008000" />
+      <workItem from="1554793023695" duration="3737000" />
+      <workItem from="1554801982451" duration="64000" />
+      <workItem from="1555654268694" duration="5000" />
+      <workItem from="1557624612708" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestJdbcTemple_testInsert - 2019.04.09 at 15h 25m 53s.xml">
+      <configuration name="TestJdbcTemple.testInsert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testInsert - 2019.04.09 at 15h 32m 06s.xml">
+      <configuration name="TestJdbcTemple.testInsert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple - 2019.04.09 at 15h 33m 18s.xml">
+      <configuration name="TestJdbcTemple" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryOne - 2019.04.09 at 15h 36m 13s.xml">
+      <configuration name="TestJdbcTemple.testQueryOne" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryObeRow - 2019.04.09 at 15h 38m 39s.xml">
+      <configuration name="TestJdbcTemple.testQueryObeRow" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryOneRowForBean - 2019.04.09 at 15h 49m 11s.xml">
+      <configuration name="TestJdbcTemple.testQueryOneRowForBean" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryRows2 - 2019.04.09 at 15h 56m 33s.xml">
+      <configuration name="TestJdbcTemple.testQueryRows2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryRows2 - 2019.04.09 at 15h 57m 00s.xml">
+      <configuration name="TestJdbcTemple.testQueryRows2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryRows - 2019.04.09 at 15h 57m 28s.xml">
+      <configuration name="TestJdbcTemple.testQueryRows" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJdbcTemple_testQueryRows - 2019.04.09 at 15h 57m 55s.xml">
+      <configuration name="TestJdbcTemple.testQueryRows" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="52452000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22948164" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899868" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32392776" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3522868" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32994923" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32994923" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32919255" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.32994923" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24946997" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3296322" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_06chapter.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_06chapter.java</url>
+          <line>10</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day19/src/com/twc/jlyi/_02_02demo.java</url>
+          <line>10</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day18/src/com/twc/jlyi/_030305demo.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day17_LoginDemo_02/src/com.twc.utils/Client.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day18ClassLoader/src/com/twc/Test.java</url>
+          <line>4</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day17/src/com/twc/jlyi/debug.java</url>
+          <line>7</line>
+          <properties class="com.twc.jlyi.debug" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day18/src/com/twc/jlyi/_01_05chapter.java</url>
+          <line>6</line>
+          <properties class="com.twc.jlyi._01_05chapter" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day17_JDBCDemo_01/src/Client.java</url>
+          <line>4</line>
+          <properties class="Client" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/test/testJdbc.java</url>
+          <line>12</line>
+          <properties class="com.twc.test.testJdbc" method="testSelect">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/day18/src/druid.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18/src/com/twc/jlyi/_01_05chapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.37-bin.jar!/com/mysql/jdbc/Driver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/jdk/internal/loader/ClassLoaders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17/src/com/twc/jlyi/_01demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="35" column="1" selection-start-line="35" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_01/resources/jdbcinfo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="7" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_LoginDemo_02/src/com.twc.utils/Test.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="364" selection-start-line="364" selection-end-line="364" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17/src/com/twc/zoye/zoye1/jdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/test/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/utils/JdbcUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="63" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_01/src/com/twc/test/testJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/utils/JdbcUtil_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_02/resources/jdbcinfo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_LoginDemo_02/resources/jdbcinfo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_LoginDemo_02/src/com.twc.utils/JdbcUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_LoginDemo_02/src/com.twc.utils/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_JDBCDemo_02/src/com/twc/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_C3p0_03/src/com/twc/domin.java" />
+    <entry file="file://$PROJECT_DIR$/day18_C3p0_03/src/com/twc/domin/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-672">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_C3p0_03/resources/c3p0-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_C3p0_03/src/com/twc/utis/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_C3p0_03/src/com/twc/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/utils.java" />
+    <entry file="file://$PROJECT_DIR$/day18_ConnectionPool_02/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.sql/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/utils/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/MyConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_ConnectionPool_02/src/com/twc/pool/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_DRUID_04/src/com/twc/utils.java" />
+    <entry file="file://$PROJECT_DIR$/day18_DRUID_04/src/com/twc/utils/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_DRUID_04/resources/druidconfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18_DRUID_04/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18ClassLoader/src/com/twc/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18ClassLoader/src/com/twc/MyClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day18ClassLoader/src/com/twc/JavaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19/src/com/twc/tool/jdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-jdbc-5.0.0.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="643" column="15" selection-start-line="643" selection-start-column="15" selection-end-line="643" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19/src/com/twc/util/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/lib/spring-jdbc-4.1.2.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="1724" column="23" selection-start-line="1724" selection-start-column="23" selection-end-line="1724" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/lib/spring-jdbc-4.1.2.RELEASE.jar!/org/springframework/jdbc/core/RowMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="10" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/utils/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding>
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19/src/com/twc/jlyi/_02_02demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/src/TestJdbcTemple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="62" column="47" lean-forward="true" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19/src/com/twc/jlyi/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19_jdbc元数据&amp;JDbcTemplate/resources/druidconfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>day19_jdbc元数据&amp;JDbcTemplate</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.25611174" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

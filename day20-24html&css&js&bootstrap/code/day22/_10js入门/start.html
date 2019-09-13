@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.onload = function () {
+
+    }
+</script>
+<img id="img" src="../img/mm.jpg" width="400px" height="400px"/>
+<br>
+<!-- 需求： 用户点击隐藏按钮隐藏图片，点击显示按钮显示图片 -->
+<script>
+    window.onload = function(){
+        var img = document.getElementById("img");
+        //1.获取标签
+        var hide = document.getElementById("hide");
+        // 给该标签绑定点击事件
+        hide.onclick =function () {
+            img.style.display= "none";
+        }
+        var  show =document.getElementById("show")
+        show.onclick= function () {
+            img.style.display="inline"
+
+        }
+
+    }
+
+
+</script>
+
+
+
+<input id="hide" type="button" value="隐藏">
+<input id="show" type="button" value="显示">
+
+
+</body>
+</html>

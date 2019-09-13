@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace="对应Dao的全限定名"
+-->
+<mapper namespace="com.itheima.mapper.UserDao">
+
+    <!--
+        根据用户ID查询用户信息
+        传入的参数类型为什么是int
+
+    -->
+    <select id="findByUserId" parameterType="int"
+            resultType="User">
+    select*from user where  id= #{id}
+
+    </select>
+
+    <!--
+        根据用户名模糊搜索用户信息
+    -->
+    <select id="findByUserName" parameterType="String"
+            resultType="User">
+        select*from user where username like  '%${value}%'
+    </select>
+
+    <!--
+        添加用户信息
+    -->
+    <insert id="saveUser" parameterType="User">
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into user(username,sex,birthday,address)
+        values (#{username},#{sex},#{birthday},#{address})
+    </insert>
+
+</mapper>

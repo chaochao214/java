@@ -1,0 +1,42 @@
+EL表达式
+1. 往域对象存放一个字符串，使用EL表达式获取    ${key}
+2. 往request、session域对象中，使用同一个key存放不同的字符串
+   使用EL表达式分别获取request域对象和session域对象中的字符串
+   ${requestScope.key}
+   ${sessionScopr.key}
+   
+3. 往域对象中存放一个JavaBean对象，然后使用EL表达式获取JavaBean的属性
+   ${key.属性名}
+   
+4. 使用EL表达式的empty运算符判断字符串是否为没空字符串，对象是否为null，集合的长度是否为0 
+
+5. 使用EL表达式获取cookie中的数据
+
+
+JSTL标签库
+1. 学习if标签的使用进行判断
+
+2. 使用forEach标签，遍历集合中的数据并且展示
+
+3. 使用forEach的varStatus属性，获取遍历出来的每一个数据的状态(选做)
+	index
+	count
+	first
+	last
+	
+作业:
+1.将登录案例中的jsp页面使用EL和JSTL进行修改
+
+2.完成展示所有联系人的案例
+	1. 先把数据库建立起来
+	2. 创建项目，把前端页面拷贝进去
+	3. 把jar包拷贝进去
+	4. 把配置文件、工具类拷贝进去
+	5. 把包结构创建好
+	6. 在index.jsp页面添加a标签，跳转到ShowALlServlet查看所有联系人
+	7. 在ShowAllServlet中调用service层的方法查看所有联系人
+	8. 在Service调用dao层的方法查看所有联系人
+	9. 在ShowAllServlet中将所有联系人信息存放到域对象
+	10. 跳转到list.jsp页面
+	11. 在list.jsp页面获取数据并且遍历展示
+

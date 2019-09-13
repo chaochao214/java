@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式的入门</title>
+
+</head>
+<body>
+<script>
+    // 需求：判断一个字符串是否有三个数字组成
+    var str = "123"
+    var str2 = "M123"
+    var reg  = /\d{3}/
+    document.write( reg.test(str) + "<br>");
+    document.write( reg.test(str2)+ "<br>");
+    var reg2 = /^\d{3}$/
+    document.write( reg2.test(str)+ "<br>");
+    document.write( reg2.test(str2)+ "<br>");
+    var reg3 = /[a-z]\d{3}/i
+
+    document.write( reg3.test(str)+ "<br>");
+    document.write( reg3.test(str2)+ "<br>");
+
+</script>
+
+
+
+</body>
+</html>

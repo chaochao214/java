@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        p {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        table {
+            margin: 0 auto;
+            border: 0;
+        }
+
+        table tr {
+            height: 40px;
+            border: 0;
+        }
+
+        table tr td {
+            padding: 0 14px;
+            border: 1px solid #999
+        }
+
+        .error {
+            color: red
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery.validate.js"></script>
+
+</head>
+<body>
+<script>
+    /*//自定义校验规则
+     $.validator.addMethod("")*/
+    $(function () {
+        // 需要传入校验规则，以json的格式传入
+
+        $("#empForm").validate({
+            rules: {
+                //这里就编写校验规则
+                realname: {
+                    required: true
+                },
+                name: {
+                    required: true,
+                    rangelength: [5, 8]
+                },
+                password: {
+                    required: true,
+                    engLength: [6, 8]
+                },
+                repassword: {
+                    equalTo: "#psw"
+                },
+                age: {
+                    range: [26, 50]
+                },
+                email: {
+                    //校验邮箱格式是否正确
+                    email: true
+                },
+                cart: {
+                    cardNum: true,
+                    rules15: true,
+                    rules18: true
+                }
+            },
+            messages: {
+                realname: {
+                    //这里就编写realname的校验规则
+                    required: "真实姓名不能为空"
+                },
+                name: {
+                    required: "用户名不能为空",
+                    rangelength: "用户名长度必须是{0}-{1}位"
+                },
+                password: {
+                    required: "密码不能为空",
+                    engLength: "密码的长度必须是{0}-{1},而且不能是中文",
+                },
+                repassword: {
+                    //"#id"表示和某个id的表单项的值一样
+                    equalTo: "两次输入的密码不一致"
+                },
+                age: {
+                    range: "年龄必须在{0}-{1}之间"
+                },
+                email: {
+                    //校验邮箱格式是否正确
+                    email: "邮箱格式不正确"
+                },
+                cart: {
+                    rules15: "15位的规则不正确"
+                }
+            }
+        })
+
+    })
+</script>
+<p>员工信息录入</p>
+<form name="empForm" id="empForm" method="post" action="test.html">
+    <table border=1>
+        <tr>
+            <td>真实姓名(不能为空 ,没有其他要求)</td>
+            <td><input type="text" id="realname" name="realname"/>
+            </td>
+        </tr>
+        <tr>
+            <td>登录名(登录名不能为空,长度应该在5-8之间,可以包含中文字符(一个汉字算一个字符)):</td>
+            <td><input type="text" id="name" name="name"/></td>
+        </tr>
+        <tr>
+            <td>密码(不能为空,长度6-12字符或数字,不能包含中文字符):</td>
+            <td><input type="text" id="psw" name="password"/></td>
+        </tr>
+        <tr>
+            <td>重复密码密码(和密码框中的内容一样):</td>
+            <td><input type="text" id="psw2" name="repassword"/></td>
+        </tr>
+        <tr>
+            <td>性别(必选其一)</td>
+            <td>
+                <input type="radio" id="gender_male" value="m" name="gender" checked="checked"/>&nbsp;男&nbsp;&nbsp;
+                <input type="radio" id="gender_female" value="f" name="gender"/>&nbsp;女
+            </td>
+        </tr>
+        <tr>
+            <td>年龄(必填26-50):</td>
+            <td><input type="text" id="age" name="age"/></td>
+        </tr>
+
+        <tr>
+            <td>你的学历:</td>
+            <td><select name="edu" id="edu">
+                <option value="">－请选择你的学历－</option>
+                <option value="a">专科</option>
+                <option value="b">本科</option>
+                <option value="c">研究生</option>
+                <option value="e">硕士</option>
+                <option value="d">博士</option>
+            </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>出生日期(1982/09/21):</td>
+            <td><input type="text" id="birthday" name="birthday" value=""/></td>
+        </tr>
+
+        <tr>
+            <td>兴趣爱好:</td>
+            <td colspan="2">
+                <input type="checkbox" name="checkbox1" id="qq1"/>&nbsp;乒乓球 &nbsp;
+                <input type="checkbox" name="checkbox1" id="qq2" value="1"/>&nbsp;羽毛球 &nbsp;
+                <input type="checkbox" name="checkbox1" id="qq3" value="2"/>&nbsp;上网 &nbsp;
+                <input type="checkbox" name="checkbox1" id="qq4" value="3"/>&nbsp;旅游 &nbsp;
+                <input type="checkbox" name="checkbox1" id="qq5" value="4"/>&nbsp;购物 &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td align="left">电子邮箱:</td>
+            <td><input type="text" id="email" name="email"/></td>
+        </tr>
+        <tr>
+            <td align="left">身份证(15-18):</td>
+            <td><input type="text" id="cart" name="cart"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="firstname" id="firstname" value="保存"></td>
+        </tr>
+    </table>
+
+</form>
+
+
+</body>
+</html>

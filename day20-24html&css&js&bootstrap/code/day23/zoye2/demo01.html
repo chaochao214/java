@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<table  border="1"  cellspacing="0"  cellpadding="3">
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>潘金莲</td>
+        <td><a href="javascript:void(0)" onclick="deleteRow(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>鲁智深</td>
+        <td><a href="javascript:void(0)" onclick="deleteRow(this)">删除</a></td>
+    </tr>
+</table>
+    学号：<input type="text" id="no" value="" />
+    姓名：<input type="text" id="name" value="" />
+    <input type="button" id="addBtn" value="添加" onclick="addRow()" />
+</body>
+</html>

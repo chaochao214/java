@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ // var slogan = document.getElementById("slogan")
+ // 写成成员变量为什么会报错
+
+    function mouseoutfun() {
+        var slogan = document.getElementById("slogan")
+        slogan.style.display = "none";
+    }
+
+    function mouseoverfun() {
+        var slogan = document.getElementById("slogan")
+        slogan.style.display = '';
+
+    }
+
+
+</script>
+
+<a href="http://www.baidu.com" onmouseout="mouseoutfun()"
+   onmouseover="mouseoverfun()">百度</a>
+<div id="slogan" style="display: none">百度一下，你就知道</div>
+
+</body>
+</html>

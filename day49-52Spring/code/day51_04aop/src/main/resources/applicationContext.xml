@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="accountService" class="com.service.impl.AccountServiceImp"></bean>
+    <bean id="logger" class="com.util.Logger"></bean>
+
+   <!-- spring中基于xml的aop的配置的管理问题
+     1.通知的bean交给 spring来管理
+     2.-->
+     <!-- 配置aop-->
+     <aop:config>
+         <aop:aspect id="logAdvice" ref="logger">
+             <!--配置通知的类型，并且建立通知方法和切入点方法的关联 -->
+             <aop:before method="printLog" pointcut="execution(
+                void com.service.impl.AccountServiceImp.saveAccount())"></aop:before>
+             <aop:before method="printLog"
+                         pointcut="execution( void com.service.impl.AccountServiceImp.updateAccount())"></aop:before>
+             <aop:before method="printLog"
+                         pointcut="execution( void com.service.impl.AccountServiceImp.deleteAccount())"></aop:before>
+
+         </aop:aspect>
+     </aop:config>
+
+   <!-- <aop:config>
+        <aop:pointcut id="pt1" expression="execution(* com.service..*.*(..))"></aop:pointcut>
+        &lt;!&ndash;配置切面&ndash;&gt;
+        <aop:aspect id="logAdvice" ref="logger">
+            <aop:around method="aroundPrinLog"  pointcut-ref="pt1"></aop:around>
+        </aop:aspect>
+
+    </aop:config>-->
+</beans>

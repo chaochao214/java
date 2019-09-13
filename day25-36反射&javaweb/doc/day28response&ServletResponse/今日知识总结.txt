@@ -1,0 +1,50 @@
+1.能够使用Response对象操作HTTP响应内容(掌握) 
+	1. 设置响应状态码:setStatus(状态码)
+	2. 设置响应头:setHeader("名字","内容")
+	3. 设置响应体，通过字符输出流或者字节输出流
+		getWriter()
+		getOutputStream()
+
+2.能够处理响应乱码 (掌握)
+	两步的做法:
+	1.response.setCharacterEncoding("UTF-8")设置服务器的响应编码为UTF-8
+	2.response.setHeader("Content-Type","text/html;charset=UTF-8")告诉浏览器使用UTF-8解码
+	
+	两步合并成一步:
+	在方法的最前面添加:response.setContentType("text/html;charset=UTF-8")
+
+3.能够完成文件下载案例 (掌握，难点)
+	1.客户端发起下载请求的时候，携带请求参数filename。服务器根据参数名获取参数值
+	2.将客户端要下载的文件转换成字节输入流:使用ServletContext对象的getresourceAsStream()转换
+	3.使用response对象获取字节输出流getOutputStream()
+	4.使用IOUtils的copy()将输入流里面的内容通过输出流输出到客户端
+	
+	优化:1.弹出下载提示框，设置响应头"Content-disposition"
+	2.如果文件名有中文，提示框上就显示不出来，那么我们要对中文文件名进行编码
+		1.火狐浏览器，使用Base64进行编码
+		2.其它浏览器，使用URLEncoder进行编码
+		
+		怎么判断是否是火狐浏览器:通过request.getHeader("user-agent")获取请求头判读其是否包含"Firefox"
+		
+
+4.能够使用servletcontext域对象(掌握，掌握存值和取值和移出值，重点)
+	1.获取ServletContext:getServletContext()
+	2.使用ServletContext存数据:setAttribute(key,value)
+	3.使用ServletContext获取数据:getAttribute(key)
+	4.使用ServletContext删除数据:removeAttribute(key)
+
+5.能够使用ServletContext获取资源文件的真实路径(最好是要掌握)
+	getRealPath(传入文件在web中的路径);
+
+6.能够使用ServletContext将资源文件转换成字节输入流(需要掌握)
+	getResourceAsStream(传入文件在web中的路径)
+	
+	如果文件在resources文件夹中，使用类加载器将其转换成流
+	如果文件在web文件夹中，使用ServletContext将其转换成流
+
+7. 使用response对象发起重定向:
+	1.两步完成:第一步setStatus(302)  第二步setHeader("location","跳转路径")
+	
+	2.一步完成:sendRedirect("跳转路径")
+	
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type ="text/javascript">
+    function testClick() {
+        alert("被点击了")
+
+
+    }
+
+    function changeImage(imgObj) {
+        imgObj.src = "../img/2.jpg";
+    }
+
+
+</script>
+<body onload="ready()">
+<input type = "button" value="点我啊" onclick="testClick()"/><br/><br/>
+<img src="../img/1.jpg" width="100%" onclick="changeImage(this)">
+
+<input type="text" value="请输入用户名。。。" onfocus="clearText(this)">
+</body>
+</html>

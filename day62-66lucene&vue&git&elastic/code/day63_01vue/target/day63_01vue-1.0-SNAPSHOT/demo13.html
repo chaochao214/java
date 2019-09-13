@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo13</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}}
+</div>
+</body>
+
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello world'
+        },
+        beforeCreate: function () {
+            showData('创建vue实例前', this)
+
+        },
+        created: function () {
+            showData('创建vue实例后', this)
+        },
+        beforeMount: function () {
+            showData('挂载到dom前', this)
+
+        }
+    });
+
+    function showData(process, obj) {
+        console.log(process);
+        console.log('data数据' + obj.message)
+        console.log('vue挂载的对象')
+        console.log(obj.$el)
+        console.log('真实dom结构：' + document.getElementById('app').innerHTML);
+        console.log('------------------')
+        console.log('------------------')
+    }
+
+    //
+    vue.message = "good...";
+    vue.$destroy();
+</script>
+</html>

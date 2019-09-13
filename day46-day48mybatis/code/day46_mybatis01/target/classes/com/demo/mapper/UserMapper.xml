@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.UserMapper">
+    <!--findAll-->
+    <select id="findAll" resultType="com.demo.domain.User">
+        SELECT * FROM  user
+    </select>
+    <!--添加用户-->
+    <insert id="saveUser" parameterType="com.demo.domain.User">
+         INSERT INTO USER  (username,birthday,sex,address) values
+         (#{username},#{birthday},#{sex},#{address})
+    </insert>
+    <!--修改用户-->
+    <update id="updateUser" parameterType="com.demo.domain.User">
+           UPDATE  USER SET   username=#{username},birthday=#{birthday},sex=#{sex},address=#{address} WHERE id=#{id}
+</update>
+    <!--模糊查询-->
+
+    <select id="findUserByUsername" parameterType="java.lang.String" resultType="com.demo.domain.User">
+    /*SELECT * FROM  user WHERE  username LIKE #{username}*/
+    SELECT * FROM  user WHERE  username LIKE '%${value}%'
+</select>
+
+    <!-- <select id="findByVo" parameterType="com.demo.domain.QueryVo" resultType="com.demo.domain.User">
+         select*from  user where  username = #{user.username}
+     </select>-->
+
+    <!--起别名的方式来解决类名和属性名不对应的方式来处理这些问题-->
+
+    <!--UserResultMap-->
+    <resultMap id="UserResultMap" type="com.demo.domain.User">
+        <id column="id_" property="id"/>
+        <result column="username_" property="username"/>
+        <result column="birthday_" property="birthday"/>
+        <result column="sex_" property="sex"/>
+        <result column="address_" property="address"/>
+    </resultMap>
+
+    <!--findByVo-->
+    <select id="findByVo" parameterType="com.demo.domain.QueryVo" resultMap="UserResultMap">
+    SELECT id id_,username username_ ,birthday birthday_ ,sex sex_ ,address address_  FROM  user WHERE username = #{user.username}
+</select>
+
+
+    <!--613mapper文件的测试-->
+    <insert id="saveUser2" parameterType="com.demo.domain.User">
+          insert into  User (id, username, birthday, sex, address)
+   values ( #{id }, #{username }, #{birthday }, #{sex }, #{address})
+     </insert>
+
+     <update id="updateUser2" parameterType="com.demo.domain.User">
+  update  user set
+          username=#{username}, birthday=#{birthday}, sex=#{sex}, address=#{address} where id=#{id}
+     </update>
+
+      <delete id="deleteUser2">
+          delete  from  user where id=#{id}
+      </delete>
+
+     <!--根据用户名查找用户信息-->
+      <!--  <select id="findByVo2"  parameterType="com.demo.domain.QueryVo"
+                 resultType="com.demo.domain.User">
+              select * from user where  username  =#{user.username}
+        </select>-->
+
+    <!--测试usermapper的-->
+     <!--userMap的问题-->
+     <resultMap id="UserResultMap2" type="com.demo.domain.User">
+           <id column="id_" property="id"></id>
+           <id column="username_" property="username"></id>
+           <id column="birthday_" property="birthday"></id>
+           <id column="sex_" property="sex"></id>
+           <id column="address_" property="address"></id>
+     </resultMap>
+     <select id="findByVo2" parameterType="com.demo.domain.QueryVo"
+     resultMap="UserResultMap2">
+           SELECT id id_,username username_ ,birthday birthday_ ,sex sex_ ,address address_  FROM  user WHERE username = #{user.username}
+
+
+     </select>
+
+     <select id="test">
+
+     </select>
+
+
+</mapper>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /*//这样的顺序为什么执行失败
+    var i = 0;
+    var img = document.getElementById("img")
+    while (true) {
+
+        img.src= "../../img/"+ i+ ".jpg"
+        i++;
+        if(i==4){
+            i=0;
+        }
+        setInterval(3000);
+    }*/
+
+    var i = -1;
+    function changeImg() {
+        var img = document.getElementById("img")
+        i++;
+        img.src = "../../img/" + i + ".jpg"
+        if(i==4){
+            i=-1;
+        }
+    }
+    // 为什么在这里函数可以直接执行？
+    setInterval(changeImg, 300)
+
+</script>
+
+<body>
+<img src="../../img/0.jpg" id="img" width="400px" height="500px">
+</body>
+</html>

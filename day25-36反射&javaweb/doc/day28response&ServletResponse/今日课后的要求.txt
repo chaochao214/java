@@ -1,0 +1,32 @@
+1.做一个重定向的效果
+  在Servlet中使用response.sendRedirect(路径)发起重定向
+  
+2.实现解决响应的中文乱码问题
+   把前天的登录案例，改成中文响应内存，看是否乱码
+   然后使用response.setContentType("text/html;charset=uft-8");
+
+3.下载案例
+   1.使用默认的那个DefaultServlet进行下载(很简单)
+   2.自定义Servlet，下载的时候请求发给自定义的DownloadServlet，并且携带请求参数filename
+   并且在DownloadServlet中获取请求参数filename的值
+   
+   3.拼接要下载的文件的路径(到文件夹中拷贝路径)
+   
+   4.通过new FileInputStream(路径)，将要下载的资源转换成字节输入流
+   
+   5.使用response获取字节输出流，将输入流中的所有字节输出到客户端
+		1. 自己写读写操作
+		2. 可以使用IOUtils的copy方法
+		
+		
+	案例的优化:
+		1. 弹出下载提示框
+		
+		2.下载提示框上面的中文显示不了的问题
+		
+		(一定要做)3. 优化将文件转换成字节输入流:使用ServletContext的getresourceAsStream()方法
+		
+
+4. 使用ServletContext对象在俩Servlet中共享数据
+		
+		

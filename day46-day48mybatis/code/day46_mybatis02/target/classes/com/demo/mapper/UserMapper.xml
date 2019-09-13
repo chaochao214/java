@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.UserMapper">
+<!--
+    &lt;!&ndash;findAll&ndash;&gt;
+    <select id="findAll" resultType="com.demo.domain.User">
+        SELECT * FROM  user
+    </select>
+    &lt;!&ndash;添加用户&ndash;&gt;
+    <insert id="saveUser" parameterType="com.demo.domain.User">
+         INSERT INTO USER  (username,birthday,sex,address) values
+         (#{username},#{birthday},#{sex},#{address})
+    </insert>
+    &lt;!&ndash;修改用户&ndash;&gt;
+    <update id="updateUser" parameterType="com.demo.domain.User">
+           UPDATE  USER SET   username=#{username},birthday=#{birthday},sex=#{sex},address=#{address} WHERE id=#{id}
+</update>
+    &lt;!&ndash;模糊查询&ndash;&gt;
+
+    <select id="findUserByUsername" parameterType="java.lang.String" resultType="com.demo.domain.User">
+    /*SELECT * FROM  user WHERE  username LIKE #{username}*/
+    SELECT * FROM  user WHERE  username LIKE '%${value}%'
+</select>
+-->
+
+    <select id="findByVo" parameterType="com.demo.domain.QueryVo" resultType="com.demo.domain.User">
+        select*from  user where  username = #{user.username}
+    </select>
+
+    <!--起别名的方式来解决类名和属性名不对应的方式来处理这些问题-->
+
+    <!--UserResultMap-->
+    <resultMap id="UserResultMap" type="com.demo.domain.User">
+        <id column="id_" property="id"/>
+        <result column="username_" property="username"/>
+        <result column="birthday_" property="birthday"/>
+        <result column="sex_" property="sex"/>
+        <result column="address_" property="address"/>
+    </resultMap>
+
+<!--
+    &lt;!&ndash;findByVo&ndash;&gt;
+    <select id="findByVo" parameterType="com.demo.domain.QueryVo" resultMap="UserResultMap">
+    SELECT id id_,username username_ ,birthday birthday_ ,sex sex_ ,address address_  FROM  user WHERE username = #{user.username}
+</select>-->
+</mapper>

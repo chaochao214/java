@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>验证注册页面</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .main {
+            width: 525px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hr_1 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #3275c3;
+            height: 35px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: #3275c3;
+            vertical-align: bottom;
+            padding-left: 12px;
+        }
+
+        .left {
+            text-align: right;
+            width: 80px;
+            height: 25px;
+            padding-right: 5px;
+        }
+
+        .center {
+            width: 280px;
+        }
+
+        .in {
+            width: 130px;
+            height: 16px;
+            border: solid 1px #79abea;
+        }
+
+        .red {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        div {
+            color: #F00;
+        }
+    </style>
+    <script type="text/javascript">
+        //进行表单的检验
+        // 当输入框失去焦点的时候，可以检验用户名
+        // 规则是什么，只能由英文字母和数字组成，长度为4-16个字符，英文字母开头
+
+        function checkUsername() {
+            var reg = /^[a-zA-z][a-zA-z0-9]{3,15}$/
+            //判断用户名：其实就是输入框的内容
+            var username = document.getElementById("user").value;
+            var flag = reg.test(username);
+            var uspan = document.getElementById("uSpan");
+            if (flag) {
+                uspan.innerHTML = "<img src='../img/gou.png'>"
+            } else {
+                uspan.innerHTML = "用户名格式错误"
+            }
+        }
+
+        function checkPwd(obj) {
+            var reg = /^[a-z0-9]{6,20}$/i
+            var pwd = obj.value;
+            var flag = reg.test(pwd);
+
+            //获取密码框后面的span
+            var pSpan = document.getElementById("pSpan");
+            if (flag) {
+                //密码格式正确
+                pSpan.innerHTML = "<img src='../img/gou.png' width='30px' height='18px'/>"
+            } else {
+                //密码的格式错误
+                pSpan.innerHTML = "密码格式错误"
+            }
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+<form action="" method="post" id="myform">
+    <table class="main" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td><img src="../img/logo.jpg" alt="logo"/>
+                <img src="../img/banner.jpg" alt="banner"/></td>
+        </tr>
+        <tr>
+            <td class="hr_1">新用户注册</td>
+        </tr>
+        <tr>
+            <td style="height:10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <!-- 不能为空， 输入长度必须介于 5 和 10 之间 -->
+                        <td class="left">用户名：</td>
+                        <td class="center">
+                            <input id="user" name="user" type="text" class="in"
+                                   onblur="checkUsername()"
+                            />
+                            <span id="uSpan" style="color: red"> </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空， 输入长度大于6个字符 -->
+                        <td class="left">密码：</td>
+                        <td class="center">
+                            <input id="pwd" name="pwd" type="password" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空， 与密码相同 -->
+                        <td class="left">确认密码：</td>
+                        <td class="center">
+                            <input id="repwd" name="repwd" type="password" class="in"
+                                   onblur="checkPwd(this)"/>
+                            <span id="pspan" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空， 邮箱格式要正确 -->
+                        <td class="left">电子邮箱：</td>
+                        <td class="center">
+                            <input id="email" name="email" type="text" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空， 使用正则表达式自定义校验规则,1开头，11位全是数字 -->
+                        <td class="left">手机号码：</td>
+                        <td class="center">
+                            <input id="mobile" name="mobile" type="text" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 不能为空， 要正确的日期格式 -->
+                        <td class="left">生日：</td>
+                        <td class="center">
+                            <input id="birth" name="birth" type="text" class="in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">&nbsp;</td>
+                        <td class="center">
+                            <input name="" type="image" src="../img/register.jpg"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

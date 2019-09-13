@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace="对应Dao的全限定名"
+-->
+<mapper namespace="com.itheima.mapper.AccountMapper">
+    <resultMap id="AccountResultMap" type="Account">
+        <id column="id" property="id"></id>
+        <result column="money" property="money"/>
+        <result column="uid" property="uid"/>
+        <association property="user"
+                     select="com.itheima.mapper.UserMapper.getUserById"
+                     column="uid"/>
+    </resultMap>
+
+    <select id="getAccountById" parameterType="int" resultMap="AccountResultMap">
+       select*from account  where  id=#{id}
+    </select>
+
+
+    <select id="getAccountById2" parameterType="int" resultMap="AccountResultMap2">
+         select*from account  where  id=#{id}
+    </select>
+
+    <resultMap id="AccountResultMap2" type="Account">
+
+        <id column="id" property="id"></id>
+        <result column="money" property="money"></result>
+        <result column="uid" property="uid"></result>
+        <association property="user"
+                     select="com.itheima.mapper.UserMapper.getUserById"
+                     column="uid"></association>
+    </resultMap></mapper>

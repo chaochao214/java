@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试的名字</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/checkbox.js"></script>
+</head>
+ <script>
+      function  fn1() {
+          $(":checkbox").check()
+      }
+      function  fn2() {
+          $(":checkbox").uncheck()
+
+      }
+ </script>
+<body>
+<input type="checkbox" value="basketball">篮球
+<input type="checkbox" value="football">足球
+<input type="checkbox" value="yumaoball">羽毛球
+<br>
+<input type="button" onclick="fn1()" value="全选">
+<input type="button" onclick="fn2()" value="全取消">
+
+
+
+</body>
+</html>

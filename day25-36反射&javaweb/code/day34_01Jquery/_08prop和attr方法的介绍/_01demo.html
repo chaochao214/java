@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+<script>
+     $(function () {
+         //建议的做法：boolean方法用prop方法
+      //  alert($("#bj").attr("name"))
+      //  alert($("#hobby").attr("checked"))
+          alert($("#hobby").prop("chekced"))
+
+     })
+</script>
+</head>
+<body>
+<ul>
+    <li id="bj" name="beijing" xxx="yyy">北京</li>
+    <li id="tj" name="tianjin">天津</li>
+</ul>
+<input type="checkbox" id="hobby" checked="checked"/>
+</body>
+</html>

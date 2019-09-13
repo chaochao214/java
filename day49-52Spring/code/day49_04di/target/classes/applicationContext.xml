@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- ioc控制反转: 通过spring容器去创建对象管理对象
+     bean:ioc的配置 , id对象的唯一标识，class -->
+
+
+    <!--  5.3 set方法注入的形式，-->
+    <!--spring创建当前的时间对象-->
+    <bean id="now" class="java.util.Date"></bean>
+
+    <bean id="AccountService" class="com.twc.service.impl.AccountServiceImpl">
+        <property name="name" value="李四"></property>
+        <property name="age" value="22"></property>
+        <property name="birthday" ref="now"></property>
+        <property name="arrays">
+            <array>
+                <value>冯校长</value>
+                <value>张艺谋</value>
+                <ref bean="now"></ref>
+            </array>
+        </property>
+        <property name="list">
+            <array>
+                <value>纷纷</value>
+                <value>ss</value>
+                <ref bean="now"></ref>
+            </array>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="driver">com.mysq.jdbc.driver</prop>
+                <prop key="url">jdbc</prop>
+                <prop key="username">root</prop>
+                <prop key="password">root</prop>
+
+            </props>
+        </property>
+    </bean>
+
+    <bean id="AccountDao" class="com.twc.dao.impl.AccountDaoImpl"></bean>
+
+
+
+
+    <bean id="accountServiceImpl2" class="com.twc.service.impl.AccountServiceImpl2">
+        <property name="name" value="小明"></property>
+        <property name="age" value="21"></property>
+        <property name="birthday" ref="now"></property>
+    </bean>
+
+    <bean id="accountServiceImpl3" class="com.twc.service.impl.AccountServiceImpl3">
+        <property name="accountDao" ref="AccountDao"></property>
+    </bean>
+
+
+</beans>

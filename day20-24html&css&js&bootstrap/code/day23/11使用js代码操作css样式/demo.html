@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .redStyle {
+            background-color: red;
+        }
+
+        .blueStyle {
+            background-color: blue;
+        }
+    </style>
+<script>
+    //给输入框绑定鼠标移入和移出事件，当鼠标移入的时候，设置输入框的背景色为红色，鼠标移出的时候，设置其背景色为蓝色
+
+    function over(obj){
+        obj.className = "redStyle"
+
+    }
+
+    function out(obj){
+        obj.className = "blueStyle"
+    }
+
+
+
+</script>
+</head>
+<body>
+<input type="text" id="ipt" onmouseover="over(this)"
+       onmouseout="out(this)">
+</body>
+</html>

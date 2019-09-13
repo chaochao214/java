@@ -1,0 +1,11 @@
+<?xml version ="1.0" encoding = "utf-8"  standalone = "no" ?>
+<?xml-stylesheet  type="text/css" href="a.css" ?>
+
+<persons>
+    <person id="1" value="123">
+        <name>&lt;&gt;jay</name>
+        <age>18</age>
+        <address info="台湾"/>
+        <des><![CDATA[if a<b && a<0) then]]></des>
+    </person>
+</persons>

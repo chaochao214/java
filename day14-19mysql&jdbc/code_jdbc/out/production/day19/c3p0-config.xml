@@ -1,0 +1,29 @@
+<c3p0-config>
+    <default-config>
+        <!--数据库连接的基本信息-->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/day17</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <!--连接池的初始化容量-->
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <!--连接池的最大容量-->
+        <property name="maxPoolSize">100</property>
+        <!--连接池的最小容量-->
+        <property name="minPoolSize">10</property>
+    </default-config>
+
+    <!-- This app is massive! -->
+    <named-config name="travel">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/day17</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">100</property>
+
+    </named-config>
+</c3p0-config>

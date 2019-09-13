@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 为什么alert不会直接执行
+        var str  = new date();
+        alert(str);
+
+
+        function hide() {
+             var img = document.getElementById("img");
+             img.style.display ="none";
+        }
+        function show(){
+            var  img   = document.getElementById("img")
+             img.style.display="inline"
+        }
+
+
+    </script>
+</head>
+<body>
+   <img id = "img" src="img/mm.jpg" width="400px" height="400px"/>
+
+   <br>
+<input type = "button" value="隐藏" onclick="hide()">
+<input type = "button" value="显示" onclick="show()">
+
+
+
+
+</body>
+</html>

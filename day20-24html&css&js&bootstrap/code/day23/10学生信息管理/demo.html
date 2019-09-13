@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息管理</title>
+    <style type="text/css">
+        table {
+            width: 500px;
+        }
+
+        th {
+            background-color: lightgray;
+
+        }
+
+        tr:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<script>
+    function addRow() {
+        var noElement = document.getElementById("no")
+        var no = noElement.value;
+
+        var nameElement = document.getElementById("name")
+        var name = nameElement.value;
+
+        var trElement = document.createElement("tr")
+        /* trElement.innerHTML = "<td>" + no + "</td>\n" + "<td>"+name+"</td>\n" +
+                 "<td>/n"+
+             "<a href = \"javascript:;"onclick =\"deleteRow(this)\">删除</a>\n"+
+     "</td>"*/
+
+        trElement.innerHTML = "<td>" + no + "</td>\n" +
+            "<td>" + name + "</td>\n" +
+            "<td>\n" +
+            "<a href=\"javascript:;\" onclick=\"deleteRow(this)\">删除</a>\n" +
+            "</td>"
+
+        // tr标签添加到表格里
+        var data = document.getElementById("data");
+        data.appendChild(trElement)
+        noElement.value = ""
+        nameElement.value = ""
+
+    }
+
+    function deleteRow(obj) {
+        var trElement = obj.parentNode.parentNode;
+        trElement.remove();
+    }
+
+
+</script>
+<body>
+<div>
+    <table border="1" cellspacing="0" cellpadding="3">
+        <tbody id="data">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>0001</td>
+            <td>潘金莲</td>
+            <td>
+                <a href="javascript:;" onclick="deleteRow(this)">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>0002</td>
+            <td>鲁智深</td>
+            <td>
+                <a href="javascript:;" onclick="deleteRow(this)">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+    学号：<input type="text" id="no" value=""/>
+    姓名: <input type="text" id="name" value=""/>
+    <input type="button" id="addBtn" value="添加" onclick="addRow()"/>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace="对应Dao的全限定名"
+-->
+<mapper namespace="com.itheima.mapper.AccountUserMapper">
+
+    <!--
+        一对一继承关系实现查询
+    -->
+    <select id="one2oneExt" parameterType="int" resultType="AccountUser">
+      SELECT a.*,u.username,u.address FROM account a,user u WHERE a.uid=u.id AND a.id=#{id}
+    </select>
+
+    <select id="one2oneExt2" parameterType="int" resultType="AccountUser2">
+        select  a.*,u.username,u.address from account a,user  u wheree a.uid = u.id   a.id= #{id}
+    </select>
+
+    <!--
+        一对一映射转换器
+    -->
+    <resultMap id="ResultMapAccount" type="Account">
+        <id column="id" property="id"/>
+        <result column="money" property="money"/>
+        <result column="uid" property="uid"/>
+
+        <!--Account.user-->
+        <result column="username" property="user.username"/>
+        <result column="address" property="user.address"/>
+        <result column="sex" property="user.sex"/>
+        <result column="birthday" property="user.birthday"/>
+    </resultMap>
+
+
+    <!--
+        Association
+    -->
+    <resultMap id="ResultMapAccountAssociation" type="Account">
+        <id column="id" property="id"/>
+        <result column="money" property="money"/>
+        <result column="uid" property="uid"/>
+
+        <!--
+            association:一对一转换实现
+                 property="当前映射转换后将值赋值给resultMap的指定属性"
+                 javaType="User":映射数据转换的类型
+        -->
+        <association property="user" javaType="User">
+            <!--Account.user-->
+            <result column="username" property="username"/>
+            <result column="address" property="address"/>
+            <result column="sex" property="sex"/>
+            <result column="birthday" property="birthday"/>
+        </association>
+    </resultMap>
+
+    <!--
+        一对一实现
+    -->
+    <select id="one2one" parameterType="int" resultMap="ResultMapAccountAssociation">
+      SELECT a.*,u.username,u.address,u.sex,u.birthday,u.id userid FROM account a,user u WHERE a.uid=u.id AND a.id=#{id}
+    </select>
+
+
+    <!--/614-->
+    <!--type属性是什么意思？-->
+    <resultMap id="accountMap2" type="Account">
+        <id column="id" property="id"></id>
+        <result column="money" property="money"></result>
+        <result column="uid" property="uid"></result>
+        <association property="user" javaType="User">
+            <result column="username" property="username"></result>
+            <result column="address" property="address"></result>
+        </association>
+    </resultMap>
+
+
+    <select id="findAccountList2" resultMap="accountMap2">
+        select
+         account.*,
+        user.username,
+        user.address
+        from   account,user
+        where account.uid =  user.id
+    </select>
+</mapper>

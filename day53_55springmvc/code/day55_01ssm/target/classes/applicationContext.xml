@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+   <!--
+    <context:component-scan base-package="com.twc">
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+    </context:component-scan>-->
+
+    <!--sqlMapConfig的内容配置到applicationContext的配置文件中-->
+    <!--配置 C3po的数据对象-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql:///day55ssm"/>
+        <property name="user" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+    <!--配置sqlSession的工厂-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--扫描dao的包-->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.twc.dao"></property>
+    </bean>
+
+
+    <!--配置spring的声明式事务管理    -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--开启注解的方式使用事务-->
+    <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
+    <!--配置事务通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--这都是什么意思-->
+            <tx:method name="*" read-only="true"/>
+            <tx:method name="save*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"></tx:method>
+            <tx:method name="update*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"></tx:method>
+            <tx:method name="delete*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+    <!--配制aop的增强事务 -->
+    <aop:config>
+        <!--这个表达式是什么意思-->
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.twc.service..*.*(..))"></aop:advisor>
+    </aop:config>
+
+</beans>
+

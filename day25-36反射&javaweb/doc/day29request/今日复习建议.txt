@@ -1,0 +1,40 @@
+1.让你的同桌访问你的项目，你获取它的如下信息:
+	1. 请求方式(getMethod())
+	2. IP地址(getRemoteAddr())
+	3. 浏览器信息(user-agent请求头)
+	
+	
+2. 获取参数名为"username"的请求参数，先使用英文，然后改成中文
+		get方式下是不乱码的
+		post方式下中文会发生乱码，解决乱码
+	getParameter(name)
+	setCharacterEncoding("UTF-8")
+	
+		
+3. 写一个注册页面，往Servlet传入用户信息，在Servlet中将用户信息存放到user对象中
+	接下来，将user对象中的数据使用JdbcTemplate存放到数据库(选做)
+	getParameterMap()
+	BeanUtils的使用
+	JdbcTemplate的使用
+	
+	
+4. 登录案例
+	1.在以前登录案例的基础上，将校验用户名和密码改成到数据库校验
+	
+	2.封装一个业务层，将校验用户名的操作，放到业务层中
+	
+	3.封装一个持久层，将数据查询的操作，放到持久层中
+	
+	4.完善包结构，将servlet放置到web里面
+	
+	第2-4步相当于是代码结构的优化
+	
+	
+	再进行功能的优化
+	
+	5.登录失败，跳转回到login.jsp,并且提示"用户名或密码错误"
+		request域对象存取值
+		请求转发
+		
+	6.登录成功，将user对象存放到request域对象，再跳转到success.jsp,
+		取出user的nickname

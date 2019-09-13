@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script>
+        var imgs = ["../img/man00.jpg", "../img/man01.jpg", "../img/man02.jpg", "../img/man03.jpg", "../img/man04.jpg", "../img/man05.jpg", "../img/man06.jpg"]
+        var i = 0
+
+        //改变小相框图片的方法
+        function changeImg() {
+            i++
+            if (i == 7) {
+                i = 0
+            }
+            $("#img1ID").attr("src", imgs[i])
+
+        }
+
+        //声明一个开始抽奖的方法
+        function imgStart() {
+            //开始抽奖就是不断地、快速的切换小相框中的图片
+            //开启循环执行的定时器
+
+            itvId = setInterval(changeImg, 50);
+            //设置"开始"按钮,"停止"按钮可用
+            $("#startID").prop("disabled", true)
+            $("#stopID").prop("disabled", false)
+        }
+
+        //声明一个停止抽奖的方法
+        function imgStop() {
+            //停止抽奖其实就是清除定时器
+            clearInterval(itvId)
+            //将大相框中的图片改成当前小相框的图片
+            $("#img2ID").attr("src", imgs[i])
+
+            //将"开始"按钮变成可用，"停止"按钮变成不可用
+            $("#startID").prop("disabled", false)
+            $("#stopID").prop("disabled", true)
+        }
+
+
+    </script>
+</head>
+<body>
+<!-- 小像框 -->
+<div style="border-style:dotted;width:100px;height:100px">
+    <img id="img1ID" src="../img/man00.jpg" style="width:100px;height:100px"/>
+</div>
+<!-- 大像框 -->
+<div
+        style="border-style:double;width:500px;height:500px;position:absolute;left:500px;top:10px">
+    <img id="img2ID" src="../img/man00.jpg" style="width:500px;height:500px"/>
+</div>
+<!-- 开始按钮 -->
+<input
+        id="startID"
+        type="button"
+        value="点击开始"
+        style="width:150px;height:150px;font-size:22px"
+        onclick="imgStart()">
+
+<!-- 停止按钮 -->
+<input
+        id="stopID"
+        type="button"
+        value="点击停止"
+        style="width:150px;height:150px;font-size:22px"
+        disabled="disabled"
+        onclick="imgStop()">
+
+</body>
+</html>

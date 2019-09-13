@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画效果</title>
+</head>
+<script src="../js/jquery-3.3.1.js"></script>
+
+<body>
+<img id="mm" src="../img/mm.jpg" width="400px" height="400px">
+<br>
+<script>
+    function showImg() {
+        $("#mm").show(2000, function () {
+            alert("显示完毕")
+        })
+    }
+
+    function hideImg() {
+        $("#mm").fadeOut(2000)
+    }
+</script>
+
+<button onclick="showImg()">show</button>
+<button onclick="hideImg()">hide</button>
+<button onclick="hideImg()">hide</button>
+
+</body>
+</html>

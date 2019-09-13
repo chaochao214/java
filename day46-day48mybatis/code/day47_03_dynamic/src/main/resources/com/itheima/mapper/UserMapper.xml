@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace="对应Dao的全限定名"
+-->
+<mapper namespace="com.itheima.mapper.UserMapper">
+
+
+    <!--
+        SQL片段:提高代码的重用性
+    -->
+    <sql id="SQL_SELECT">
+        SELECT id,username,sex,birthday,address FROM USER
+    </sql>
+
+
+    <!--
+        查询指定ID的用户信息
+        parameterType="可写可不写，能自动识别，即便写错了也能自动识别"
+                       如果入参是集合类型，则写集合类型中对应的对象的类型  List<T>  [Object]
+    -->
+    <select id="findUserForeach" parameterType="int" resultType="User">
+        <!--
+            SELECT * FROM USER WHERE ID IN(1,2,23)
+            1)用户如果输入的ID个数为0，则SELECT * FROM USER
+            2)用户输入的ID个数不为0，则按照下面步骤来：
+                    a.sql=SELECT * FROM USER
+                    b.sql=sql+WHERE ID IN(
+                    c.ids.foreach->循环
+                        for (int id : ids) {
+                            sql+=id+",";
+                            最后一次不需要加，号
+                       }
+                    d.sql+=);
+        -->
+        <!--SELECT id,username,sex,birthday,address FROM USER-->
+
+        <!--
+            引用SQL片段
+        -->
+        <include refid="SQL_SELECT"/>
+
+        <!--
+            foreach:循环指定参数
+            collection="要循环的目标参数"
+                        如果入参为数组，则直接写array
+                        如果入参为List，则直接写list
+                        如果入参为Map，则直接写[key]
+            item="id":表示定义id变量接收当前被循环的数据
+            open="":foreach执行之前，先执行open中的字符拼接,如果foreach中拼接的字符为空字符串，则此处也不拼接
+            separator=",":分隔符
+            close=")":foreach中执行拼接完成之后，最后需要拼接的字符
+        -->
+        <foreach collection="array" item="id" open="WHERE ID IN (" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+
+    <!--
+        where
+        根据用户输入的信息搜索用户
+    -->
+    <select id="findUserWhere" parameterType="User" resultType="User">
+        select id,username,sex,birthday,address from user
+        <where>
+            <if test="username!=null and username!=''">
+                And username LIKE #{username}
+            </if>
+            <if test="address!=null and username!='">
+                and username like #{username}
+            </if>
+            <if test="address!=null and address!='' ">
+                and address =#{address}
+            </if>
+        </where>
+    </select>
+
+    <!--
+        if条件判断搜索
+        根据用户输入的信息搜索用户
+    -->
+    <select id="findUserIf" parameterType="User" resultType="User">
+        SELECT id,username,sex,birthday,address FROM user WHERE 1=1
+        <!--
+          根据用户输入的信息搜索用户
+          1)判断用户名是否为空,不为空，则拼接SQL语句查询用户信息
+              test="判断条件"
+        -->
+        <if test="username!=null and username!=''">
+            AND username LIKE #{username}
+        </if>
+        <!--
+            地址：需要根据用户输入的地址搜索
+            2)如果用户输入的地址不为空，则需要根据地址搜索
+        -->
+        <if test="address!=null and address!=''">
+            AND address=#{address}
+        </if>
+    </select>
+
+</mapper>

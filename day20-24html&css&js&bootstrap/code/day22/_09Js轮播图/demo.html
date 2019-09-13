@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var  i = 0;
+    function  changeImg() {
+        i++
+        if(i==5){
+            i  = 0
+        }
+        var img  = document.getElementById("img");
+        img.src = "../img/"+ i + ".jpg"
+    }
+     setInterval("changeImg()",3000)
+</script>
+<img  id="img" src ="../img/0.jpg" width="400px" height="400px">
+</body>
+</html>

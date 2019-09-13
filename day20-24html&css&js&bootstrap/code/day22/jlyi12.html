@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初体验</title>
+
+</head>
+<body>
+<h4>用户登录 </h4>
+<form action="server" onsubmit="return  checkUser()">
+
+    用户名：<input type="text" id="user"><input type="submit" value="登录">
+</form>
+<script type="text/javascript">
+    function checkUser() {
+            var user = document.getElementById("user").value;
+            if(user == ""){
+                alert("用户名不能为空");
+                return false;
+            }
+    }
+</script>
+
+
+<script>
+    var i=15;
+    var f=3.14;
+    var b = true;
+    var c=  "a";
+    var str = 'abc';
+
+    document.write("整数"+i+ "<br/>");
+    var i = true;
+    document.write("布尔类型"+ i+ "<br/>");
+    {
+         var a  = 3+5;
+
+    }
+    document.write("a="+a+"<br/>");
+
+
+</script>
+</body>
+</html>

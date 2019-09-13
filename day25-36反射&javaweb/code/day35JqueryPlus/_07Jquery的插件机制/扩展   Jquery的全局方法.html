@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展全局方法</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+
+        // 比较俩值的大小，获取较小的那个值
+        function min(num1, num2) {
+            return num1 > num2 ? num1 : num2;
+        }
+
+        $.extend({
+            min: function (a, b) {
+                return a > b ? b : a
+            },
+            max: function (a, b) {
+                return a > b ? a : b
+            }
+        })
+        var min = $.min(num1, num2)
+        var max = $.max(num1, num2)
+        alert(max)
+    </script>
+
+</head>
+
+<body>
+
+
+</body>
+</html>

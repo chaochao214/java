@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+">
+
+
+    <!--开启注解支持的组件扫描-->
+    <context:component-scan base-package="com.twc"></context:component-scan>
+    <!--开启aop的注解支持-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+<!--
+    <bean id="accountService" class="com.twc.service.impl.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"></property>
+        &lt;!&ndash;<property name="txManager" ref="txManager"></property>&ndash;&gt;
+    </bean>
+    &lt;!&ndash;配置dao对象&ndash;&gt;
+    <bean id="accountDao" class="com.twc.dao.impl.AccountDaoImpl">
+        <property name="runner" ref="runner"></property>
+        <property name="connectionUtils" ref="connectionUtils"></property>
+</bean>-->
+
+    <!--配置queryRunner-->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <!--<constructor-arg name="ds" ref="dataSource"></constructor-arg>-->
+    </bean>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--连接数据库的必备信息-->
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/day50springioc"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+
+
+   <!-- <bean id="connectionUtils" class="com.twc.utils.ConnectionUtils">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="txManager" class="com.twc.utils.TransactionManager">
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+
+    &lt;!&ndash;开始配置事务&ndash;&gt;
+    <aop:config>
+        <aop:pointcut id="pc" expression="execution(* com.service..*.*(..))"></aop:pointcut>
+        <aop:aspect ref="txManager">
+            <aop:before method="beginTransaction" pointcut-ref="pc"></aop:before>
+            <aop:after-returning method="commit" pointcut-ref="pc"></aop:after-returning>
+            <aop:after-throwing method="rollback" pointcut-ref="pc"></aop:after-throwing>
+            <aop:after-throwing method="clone" pointcut-ref="pc"></aop:after-throwing>
+        </aop:aspect>
+    </aop:config>
+-->
+</beans>

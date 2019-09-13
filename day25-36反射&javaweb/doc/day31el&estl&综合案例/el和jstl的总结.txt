@@ -1,0 +1,26 @@
+EL表达式的作用
+1. 获取域对象中的数据 ${name}
+
+2. 执行运算:empty运算符能够判断一个对象是否为null，一个字符串是否为空字符串，一个集合的长度是否为0
+
+3. 获取存放在cookie中的值:${cookie.cookie的名字.value}
+
+jstl标签库的使用:
+1. 导入jar包
+2. 在要使用jstl的页面，通过taglib标签引入  prefix="c" uri="/jsp/jstl/core"
+
+jstl的标签
+	if标签，test属性中写判断表达式，一般要结合EL一起使用
+	choose和when标签(稍微了解)
+	最重要forEach标签
+		begin 开始遍历的下标
+		end 结束遍历的下标
+		step 步长
+		var 遍历出来的数据，存放进域对象时候的key
+		items 用于指定要遍历的对象
+		varStatus 遍历出来的每一个对象的状态
+			index 下标
+			count 计数
+			first 
+			last
+			

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        //需求1. 设置的所有input背景颜色的标签
+        //使用标签选择器找到所有的input标签
+        //语法: $("标签名字 ")
+        // 设置css样式的方法
+
+
+        //标签选择器
+        //选择器失效
+         $("input").css("background-color","blue")
+        //id选择器
+        $("#btn").css("background-color", "blue")
+        //类选择器
+        $(".ipt").css("bcckground-color","blue")
+    })
+</script>
+
+<body>
+<br><input type="text" class="ipt" value="奥巴马">
+<br><input type="button" id="btn" value="按钮">
+<br><input type="text" id="ipt">
+</body>
+</html>

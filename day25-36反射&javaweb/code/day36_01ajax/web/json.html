@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery-3.3.1.js"></script>
+<body>
+<script>
+    function fn1() {
+        /*  //json数据格式,对于js代码他就是一个对象
+          var p = {username: "张三丰", "passwod": 123};
+          alert(p.username)*/
+        $.post("demo02", function (result) {
+            //result是服务器传过来的json
+            var name = result.name;
+            $("#uname").text(address)
+            var address = result.address;
+            $("#address").text(address)
+            var age = result.age;
+            $("#age").text(age)
+
+        }, "json")
+
+
+    }
+</script>
+<input type="button" value="显示" onclick="fn1()">
+<ul>
+    <li id="uname"></li>
+    <li id="address"></li>
+    <li id="age"></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function  addA() {
+        //创建一个li标签
+        var liElement =  document.createElement("li");
+        liElement.innerHTML  ="长沙"
+        var ul =document.getElementsByTagName("ul");
+        //var ul = document.getElementById("city")
+        ul.appendChild(liElement);
+    }
+    function  deleteA(){
+        var liElement = document.getElementById("bj")
+        var ul =document.getElementsByTagName("ul");
+       liElement.remove();
+    }
+</script>
+<body>
+    <li id="bj">北京</li><ul id="city">
+
+<li>上海</li>
+    <li>广州</li>
+</ul>
+<br/>
+<input type="button" value="添加" id="add" onclick="addA()">
+<input type="button" value="删除" id="delete" onclick ="deleteA()">
+</body>
+</html>

@@ -1,0 +1,32 @@
+一、Response的方法
+setStatus()设置响应状态码
+
+setHeader(name,value),设置响应头
+	1.Refresh，用于刷新
+	2.Location,用于重定向
+	3.Content-Type,设置响应体的内容类型
+	4.Content-Disposition,弹出下载提示框
+	
+sendRedirect("路径")，发起重定向
+setContentType("text/html;charset=UTF-8")能够解决响应乱码
+setCharacterEncoding("字符集")设置服务器的响应的字符集
+getWriter()获取字符输出流
+getOutputStream()获取字节输出流
+
+二、ServletContext的方法
+setAttribute("name",obj)存数据
+removeAttribute("name"),移除数据
+getAttribute("name"),获取数据
+getRealPath(path),获取静态资源的真实路径，默认能够获取项目的发布路径
+getResourceAsStream(path),将静态资源转换成字节输入流
+
+三、其它方法
+request.getParameter("参数名"),根据参数名获取参数值的方法
+request.getHeader("name"),根据名字获取请求头
+IOUtils.copy(is,out)循环读写数据
+contains("Firefox")判断是否包含某个字符串
+输出流的write()方法
+输入流的read()方法
+
+URLEncoder.encode(str,"UTF-8")对中文进行编码
+Base64对中文进行编码

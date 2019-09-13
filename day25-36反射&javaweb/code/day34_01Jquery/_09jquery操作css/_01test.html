@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="../js/jquery-3.3.1.js"></script>
+</head>
+<script>
+    //mouseover之后为什么还要写代码
+    $(function () {
+        $("#uname").mouseover(function () {
+                //移除blueStyle的类名
+                $("#uname").removeClass("blueStyle")
+                //鼠标移入的时候，给其添加一个"redStyle的类名 "
+                $("#uname").addClass("redStyle")
+            }
+        )
+        $("#uname").mouseout(function () {
+            $("#uame").removeClass("redStyle")
+            $("#uname").addClass("blueStyle")
+
+
+        })
+    })
+</script>
+<style>
+    .redStyle {
+        background-color: red;
+    }
+
+    .blueStyle {
+        background-color: blue;
+    }
+</style>
+<body>
+<input type="text" id="uname">
+</body>
+</html>

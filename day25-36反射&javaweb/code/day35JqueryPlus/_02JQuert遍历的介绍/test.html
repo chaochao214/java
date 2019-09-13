@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <title>jquery便利的介绍</title>
+</head>
+
+<script>
+    /*    $(function () {
+            var $input = $("input");
+            for (var i = 0; i < $input.length(); i++) {
+                var $inputElement = $input[i];
+                alert($inputElement)
+            }
+        })*/
+    var arr = [1, 2, 3, 4, "hello"]
+    $(arr).each(function (index, element) {
+        alert(index + ":" + element)
+    })
+
+</script>
+<body>
+<input type="text" value="张三">
+<input type="text" value="李四">
+<input type="text" value="王五">
+<input type="text" value="赵六">
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var n1= window.prompt("数字1","0");
+    var n2= window.prompt("数字2","0");
+    var op =window.prompt("运算符","+");
+    alert(n1+n2)
+
+    //把字符串转成数值
+     n1= parseFloat(n1)
+     n2= parseFloat(n2)
+     var  result =0;
+     switch (op) {
+         case "+":
+             result=n1+n2;
+             document.write(n1+op+n2+"="+result);
+             break;
+         default:
+             alert("运算符输入错误");
+     }
+
+
+</script>
+
+</body>
+</html>

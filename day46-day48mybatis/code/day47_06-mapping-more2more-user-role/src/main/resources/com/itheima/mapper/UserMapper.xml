@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace="对应Dao的全限定名"
+-->
+<mapper namespace="com.itheima.mapper.UserMapper">
+
+    <!--
+    映射转换器
+-->
+    <resultMap id="UserResultMap" type="User">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="sex" property="sex"/>
+        <result column="birthday" property="birthday"/>
+        <result column="address" property="address"/>
+
+        <!--
+            collection:集合转换
+            ofType="Account":集合中每个对象需要转换的类型
+            property="accounts":表示转换的数据需要赋值给resultMap的指定属性
+        -->
+        <collection property="roles" ofType="Role">
+            <id column="rid" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_desc" property="roleDesc"/>
+        </collection>
+
+    </resultMap>
+
+    <!--
+        多对多实现
+        //???? 多对多？一对一？一对多其实本质上没有什么区别？
+    -->
+    <select id="more2More" parameterType="int" resultMap="UserResultMap">
+      SELECT u.*,r.id rid,r.role_name,r.role_desc FROM user u,userrole ur,role r WHERE u.id=ur.uid AND u.id=#{id} AND ur.rid=r.id
+    </select>
+
+</mapper>

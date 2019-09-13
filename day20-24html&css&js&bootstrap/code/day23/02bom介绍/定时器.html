@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   /* //只执行一次的定时器，这个相当于一个延时器
+    setTimeout(function () {
+        alert("hello")
+    }, 2000)*/
+   //执行循环的定时，setInterval()
+
+    document.write("1----------");
+    // 执行顺讯？？ write 为什么不显示了
+    var i =0 ;
+
+
+    /*setInterval(function(){
+        alert("你好世界")
+    },2000)*/
+
+    var ivtId = setInterval(function () {
+        i++
+        document.write(i+"<br>")
+        if(i==9){
+            clearInterval(ivtId)
+        }
+
+    },2000)
+
+    document.write("ivtId的数值是" + ivtId);
+
+</script>
+</body>
+</html>

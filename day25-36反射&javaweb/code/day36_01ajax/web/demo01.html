@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试啊</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        function fn1() {
+            //  创建ajaX引擎对象
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "demo01?name=aobama")
+            xhr.send()
+            xhr.onreadystatechange = function () {
+                if (xhr.status = 200 && xhr.readyState == 4) {
+                    var text = xhr.responseText;
+                    //响应文本放到span中
+                    document.getElementById("sp").innerText = text;
+                }
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1>使用js的ajax发起异步请求</h1>
+<a href="demo01?name=aobama">发起一个同步请求</a>
+<a href="javascript:;" oncick="fn1()">使用js原生ajax发异步get请求</a>
+</body>
+</html>

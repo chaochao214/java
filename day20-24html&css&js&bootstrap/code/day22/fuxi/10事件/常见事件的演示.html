@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+ 输入框
+    1. 给输入框绑定鼠标移入和移出事件，当鼠标移入的时候设置输入框的背景色为红色，移出的时候，设置其背景色为白色
+    2. 当输入框获取焦点的时候，设置输入框的宽为300px,高为60px,失去焦点的时候设置宽为150px，高为30px
+    3. 当输入框的内容发生改变的时候，弹出改变后的内容  onchange事件
+    域的内容改变:1.内容发生了变化   2.元素失去焦点
+-->
+
+
+<!--<input type = "text"  id ="ipt"  onchange="fn3()"  onmouseover="over()"  onmouseout="out()"
+      onfocus ="fn1()"  onblur = "fn2()" >-->
+<script>
+    //  var ipt = document.getElementById("ipt")
+
+    function fun1_1() {
+        var ipt = document.getElementById("ipt")
+        ipt.style.backgroundColor = "red"
+    }
+
+    function fun1_2() {
+        document.getElementById("ipt").style.backgroundColor = "white";
+    }
+
+    function fun2_1() {
+        document.getElementById("ipt").style.width = "300px";
+        document.getElementById("ipt").style.height = "60px";
+    }
+
+    function fun2_2() {
+        document.getElementById("ipt").style.width = "150px"
+        document.getElementById("ipt").style.height = "30px"
+
+    }
+    function  fun3() {
+        var value = document.getElementById("ipt").value;
+
+        alert(value);
+    }
+
+</script>
+<input type="text" id="ipt"
+       onmouseover="fun1_1()"
+       onmouseout="fun1_2()"
+       onfocus="fun2_1()"
+       onblur="fun2_2()"
+       onchange="fun3()"
+
+>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    h1 {
+        color: black;
+    }
+</style>
+
+
+<!--
+<input type="text" id="clock" size="35" />
+<script language=javascript>
+    var int=self.setInterval("clock()",50)
+    function clock()
+    {
+        var t=new Date()
+        document.getElementById("clock").value=t
+    }
+</script>
+</form>
+<button onclick="int=window.clearInterval(int)">
+    Stop interval</button>-->
+<script>
+    //??跑不起来怎么办
+    // 定义一个itvId的作用？
+    var itvId = null;
+    //需求:当点击开始按钮的时候，我们的时钟就开始走动
+    //点击停止按钮的时候，时钟就暂停
+    function startTime() {
+        clearInterval(itvId)
+        //每次开始定时器的时候，把上一个定时器清空，
+        itvId =setInterval(function () {
+            var t = new Date()
+            document.getElementById("time").innerHtml = t;
+        }, 1000);
+    }
+
+    function pauseTime() {
+        clearInterval(itvId)
+    }
+</script>
+<body>
+<h1 id="time">我是一个时钟</h1>
+<input type="button" value="开始" onclick="startTime()">
+<input type="button" value="暂停" onclick="pauseTime()">
+
+
+</body>
+
+
+</html>

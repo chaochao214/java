@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{100 + 100 + message }}<br>
+    {{message>10? "ok": "不ok" }}<br>
+    {{message1}}
+    <br>
+    {{number+1}}
+</div>
+<script>
+    //view model
+    new Vue({
+        el: "#app",  //表示当前对象接管了div区域
+        data: {
+            number: 1,
+            message: 10, //model
+            message1: "helloworld"  //model
+        }
+    });
+</script>
+</body>
+</html>

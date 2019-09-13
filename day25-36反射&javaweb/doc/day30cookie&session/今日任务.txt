@@ -1,0 +1,43 @@
+1.在项目中创建俩Servlet，然后通过cookie进行数据共享
+	目的:练习cookie存放数据以及获取数据的使用
+	
+2. 学习cookie的使用场景
+	记住用户名的案例:
+		1. 修改login.jsp页面，添加checkbox可以选择是否记住
+		2. 在LoginServlet中
+			登录成功之后
+			并且判断如果用户勾选了记住用户名，则将用户名存放到cookie中，并发送给客户端
+			
+		3. 在login.jsp页面中，获取cookie中的用户名并且展示到用户名输入框中
+		
+		优化:
+			1. 如果用户不勾选记住用户名，我们要做到清空原本记住的用户名
+				setMaxAge(0)
+				
+			2. 在login.jsp页面，如果记住了用户名，则checkbox勾选
+			如果没记住，checkbox不勾选
+			
+
+3. 学习Session的使用
+	在项目中创建俩Servlet，使用session在俩servlet中共享数据
+	并且验证session的作用域是一次会话中
+	
+4. 验证码校验案例
+	1. 拷贝CheckcodeServlet到项目中，然后访问该Servlet看看是否能见到验证码
+	
+	2. 修改login.jsp页面，添加验证码图片，该图片的src就指向CheckcodeServlet
+	
+	3. 在LoginServlet中，通过获取请求参数的方式获取用户输入的验证码
+		String vcode = request.getParameter("参数名")
+		
+		在CheckcodeServlet中将服务器生成的验证码code存放到session中
+		在LoginServlet中从session中获取服务器生成的验证码code
+		
+		使用vcode和code进行校验(忽略大小写)
+			验证码正确:继续校验用户名和密码
+			验证码错误:提示客户端
+			
+	
+	优化:
+		点击验证码图片，切换验证码
+	

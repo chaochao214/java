@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--采用无参构造器的方法实例化对象-->
+    <bean id="accountService" class="com.twc.service.impl.AccountServiceImpl"
+          scope="prototype" init-method="init" destroy-method="destroy"></bean>
+
+
+    <!-- 第三种采用实例工厂的实例化方式来创建bean-->
+    <bean id="instanceFactory" class="com.twc.factory.InstanceFactory"></bean>
+    <bean id="accountService3" factory-bean="instanceFactory" factory-method="getAccountService"></bean>
+    <!--   init-method="init" destroy-method="destroy"-->
+
+    <!-- 第二种采用静态工厂的实例化方式来解决问题-->
+    <bean id="accountService2" class="com.twc.factory.StaticFactory" factory-method="getAccountService"></bean>
+</beans>
