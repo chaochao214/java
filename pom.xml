@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.java</groupId>
+    <artifactId>java_parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>day00-00java学习准备</module>
+        <module>day00leetcode</module>
+        <module>day01-13java基础</module>
+        <module>day14-19mysqljdbc</module>
+        <module>day25-36反射_javaweb</module>
+        <module>day36-40linuxredismaven</module>
+        <module>day46-day48mybatis</module>
+        <module>day49-52Spring</module>
+        <module>day53_55springmvc</module>
+        <module>day62-66lucenevuegitelastic</module>
+        <module>day97hibernate</module>
+        <module>day100hadoop</module>
+    </modules>
+
+
+</project>
