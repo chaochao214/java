@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day90_01jpa/day90_01jpa.iml" filepath="$PROJECT_DIR$/day90_01jpa/day90_01jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day90_02jpa/day90_02jpa.iml" filepath="$PROJECT_DIR$/day90_02jpa/day90_02jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day90jpa.iml" filepath="$PROJECT_DIR$/day90jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day91__fuxiDemo01/day91__fuxiDemo01.iml" filepath="$PROJECT_DIR$/day91__fuxiDemo01/day91__fuxiDemo01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day91springBoot/day91springBoot.iml" filepath="$PROJECT_DIR$/day91springBoot/day91springBoot.iml" />
+    </modules>
+  </component>
+</project>
