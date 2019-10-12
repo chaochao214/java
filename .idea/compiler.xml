@@ -7,23 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day100hadoop" />
+        <module name="day90_02jpa" />
+        <module name="day91__fuxiDemo01" />
+        <module name="day91springBoot" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="day00-00java学习准备" target="1.8" />
-      <module name="day00leetcode" target="1.8" />
-      <module name="day01-13java基础" target="1.8" />
-      <module name="day100hadoop" target="1.8" />
-      <module name="day14-19mysqljdbc" target="1.8" />
-      <module name="day20-24html_css_js_bootstrap" target="1.8" />
-      <module name="day25-36反射javaweb" target="1.8" />
-      <module name="day36-40linuxredismaven" target="1.8" />
-      <module name="day46-day48mybatis" target="1.8" />
-      <module name="day49-52Spring" target="1.8" />
-      <module name="day53_55springmvc" target="1.8" />
-      <module name="day62-66lucenevuegitelastic" target="1.8" />
-      <module name="day97hibernate" target="1.8" />
-      <module name="java学习" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

@@ -13,12 +13,14 @@
         <module>day00leetcode</module>
         <module>day01-13java基础</module>
         <module>day14-19mysqljdbc</module>
+        <module>day20-24html_css_js_bootstrap</module>
         <module>day25-36反射_javaweb</module>
         <module>day36-40linuxredismaven</module>
         <module>day46-day48mybatis</module>
         <module>day49-52Spring</module>
         <module>day53_55springmvc</module>
         <module>day62-66lucenevuegitelastic</module>
+        <module>day90jpaspringbootspringcloud</module>
         <module>day97hibernate</module>
         <module>day100hadoop</module>
     </modules>

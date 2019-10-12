@@ -11,6 +11,7 @@
     <modules>
         <module>day91springBoot</module>
         <module>day91__fuxiDemo01</module>
+        <module>day90_02jpa</module>
     </modules>
 
     <properties>
