@@ -6,3 +6,4 @@ public interface interFaceDemo {
         System.out.println("deault");
     }
 }
+//
